@@ -1,4 +1,4 @@
-# Spot Your Spotify
+# Spot Your Spotify (Project step 2)
 Collaborative programming DATA 533 Project by Seamus Riordan-Short and Jason Samuel Suwito.
 
 ### Project idea: Personalized Spotify Playlist Stats & Quiz: Spot your Spotify.
