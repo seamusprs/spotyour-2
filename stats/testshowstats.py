@@ -9,10 +9,10 @@ class TestPlaylistSs(unittest.TestCase):
         TestPlaylistSs.testpl = ss.Playlist("spotyour2/playlist")
 
     def setUp(self):
-        testpl = ss.Playlist("spotyour2/playlist")
+        self.testpl = ss.Playlist("spotyour2/playlist")
 
     def tearDown(self):
-        testpl = None
+        self.testpl = None
 
     @classmethod
     def tearDownClass(TestPlaylistSs):

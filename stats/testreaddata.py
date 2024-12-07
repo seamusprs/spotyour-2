@@ -1,5 +1,6 @@
 import spotyour2.stats.readdata as rd
 import unittest
+import pandas as pd
 
 class TestPlaylist(unittest.TestCase):
     """Test the playlist functions in the readdata module, based on the default playlist included in the spotyour package"""
@@ -19,11 +20,22 @@ class TestPlaylist(unittest.TestCase):
         TestPlaylist.testpl = None
 
     def test_getplaylist(self):
-        self.assertTrue(type(self.testpl) is rd.Playlist)
+        self.assertIsInstance(self.testpl, rd.Playlist)
 
-    def test_lengthproperty(self):
+    def test_properties(self):
         self.assertEqual(self.testpl.length, 708)
-        
+        self.assertIsInstance(self.testpl.table, pd.DataFrame)
+        self.assertIsInstance(self.testpl, rd.Playlist)
+        self.assertIsInstance(rd.Song(self.testpl), rd.Song)
+        self.assertIsInstance(self.testpl.albums, pd.Series)
+        self.assertIsInstance(self.testpl.artists, pd.Series)
+        self.assertIsInstance(self.testpl.durations, pd.Series)
+        self.assertIsInstance(self.testpl.genres, pd.Series)
+        self.assertIsInstance(self.testpl.ids, pd.Series)
+        self.assertIsInstance(self.testpl.labels, pd.Series)
+        self.assertIsInstance(self.testpl.releases, pd.Series)
+        self.assertIsInstance(self.testpl.tempos, pd.Series)
+        self.assertIsInstance(self.testpl.tracks, pd.Series)
 
 class TestSong(unittest.TestCase):
     """Test the song functions in the readdata module, based on a specific song in the default playlist """
@@ -47,11 +59,11 @@ class TestSong(unittest.TestCase):
 
     def test_getsong_id(self):
         msong = rd.Song(self.testpl, "3QZ7uX97s82HFYSmQUAN1D")
-        self.assertTrue(msong.id == "3QZ7uX97s82HFYSmQUAN1D")
+        self.assertEqual(msong.id, "3QZ7uX97s82HFYSmQUAN1D")
 
     def test_getsong_index(self):
         msong = rd.Song(self.testpl, 15)
-        self.assertTrue(msong.id == "3QZ7uX97s82HFYSmQUAN1D")
+        self.assertEqual(msong.id, "3QZ7uX97s82HFYSmQUAN1D")
 
     def test_getsongs(self):
         msong = rd.Song(self.testpl, "3QZ7uX97s82HFYSmQUAN1D")
