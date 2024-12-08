@@ -91,4 +91,4 @@ class TestQuestionBuilder(unittest.TestCase):
         self.assertIsInstance(question, str, "question is not string")
         self.assertIn(len(options), [3,4], "option length is not 3 or 4")
         
-        
+unittest.main(argv =[''], verbosity=2, exit=False)
