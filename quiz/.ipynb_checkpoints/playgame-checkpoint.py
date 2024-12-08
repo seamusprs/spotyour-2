@@ -76,11 +76,10 @@ class Game:
                     if self.q_builder.checker(user_answer, solution):
                         print("\nCongratulations! You got the correct answer!\n")
                         self.score += 1
-                        self.q_count += 1
                         break
                     else:
                         print(f"\nSorry, your answer is wrong. The correct answer is '{solution}'.\n")
-                        self.q_count += 1
+                    self.q_count += 1
                     break
                 else:
                     print("Invalid number. Please enter a number from the list!\n")
@@ -91,9 +90,7 @@ class Game:
             
     def getscore(self):
         """Prints number of correct answers and number of total questions asked."""
-        message = f"Your current score is: {self.score}/{self.q_count}. Keep up the great work!"
-        print(message)
-        return message
+        print(f"Your current score is: {self.score}/{self.q_count}. Keep up the great work!")
 
     def play(self):
         """Takes the user through the main quiz game loop."""
