@@ -2,6 +2,8 @@ import unittest
 from spotyour2.quiz import testquizbuilder as tqb
 from spotyour2.quiz import testplaygame as tpg
 
+# Please make sure to run this file outside of the spotyour2 folder. 
+
 def stats_suite():
     tests = unittest.TestLoader().discover(start_dir="spotyour2/stats", pattern="test*.py")
     # print("Tests: ", tests)
