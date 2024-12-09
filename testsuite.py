@@ -1,5 +1,7 @@
 import spotyour2.stats.testreaddata
 import spotyour2.stats.testshowstats
+import spotyour2.quiz.testplaygame
+import spotyour2.quiz.testquizbuilder
 import unittest
 
 # run this outside of the spotyour2 directory!
