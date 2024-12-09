@@ -6,7 +6,7 @@ import unittest
 
 # run this outside of the spotyour2 directory!
 
-tests = unittest.TestLoader().discover(start_dir="spotyour2/stats", pattern="test*.py")
+tests = unittest.TestLoader().discover(start_dir="spotyour2", pattern="test*.py")
 
 # print("Tests: ", tests)
 
