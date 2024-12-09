@@ -1,5 +1,5 @@
 import random
-from spotyour.stats import readdata as rd
+from spotyour2.stats import readdata as rd
 
 class Question:
     """
