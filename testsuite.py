@@ -32,7 +32,7 @@ def quiz_suite():
     suite.addTest(tpg.TestPlayGame('test_askQuestion'))
     suite.addTest(tpg.TestPlayGame('test_play'))
     
-    runner = unittest.TextTestRunner()
+    runner = unittest.TextTestRunner(verbosity=2)
     print(runner.run(suite))
 
 stats_suite()
